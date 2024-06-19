@@ -4,7 +4,7 @@ on:
     branches: 
         - development/cicdtest
 env:
-    PROJECT NAME: CICDTest
+    PROJECT NAME: CICD Test1
     ORCH_FOLDER: Dev
     ORCH_URL: https://cloud.uipath.com/
     ORCH_TENANT: rsutra
@@ -42,8 +42,7 @@ jobs:
          uses: actions/checkout@v2
        - name: Build Nuget package
          shell: pwsh
-         run:   |
-         ${{ github.workspace }}\scripts\UiPathPack.ps1 ${{ github.workspace }}\project.json -destination_folder ${{ github.workspace }}\package -autoVersion -cli_url ${{env.CLI_URL}}
+         run:  ${{ github.workspace }}\scripts\UiPathPack.ps1 ${{ github.workspace }}\project.json -destination_folder ${{ github.workspace }}\package -autoVersion -cli_url ${{env.CLI_URL}}
        - name: Upload UiPath artifacts
          uses: actions/upload-artifacts@v2
          with:
