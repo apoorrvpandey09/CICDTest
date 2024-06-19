@@ -3,10 +3,11 @@ name: Development test workflow
 on:
   push:
     branches:
-      - dev/CICDtest
+      - development/cicdtest
 
 # Here the environment variable is declared in workflow level
 env:
+  PROJECT NAME: CICD Test1
   # Replace with your Orchestrator Values 
   ORCH_URL: "https://cloud.uipath.com"
   ORCH_TENANT: rsutra
