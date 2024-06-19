@@ -7,7 +7,7 @@ on:
 
 # Here the environment variable is declared in workflow level
 env:
-  PROJECT NAME: cicdtest
+  PROJECT NAME: CICDTest
   # Replace with your Orchestrator Values 
   ORCH_URL: "https://cloud.uipath.com"
   ORCH_TENANT: rsutra
